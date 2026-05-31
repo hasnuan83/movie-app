@@ -1,0 +1,51 @@
+.genreContainer {
+  margin: 2rem 0 3rem;
+  position: relative;
+}
+
+.scrollWrapper {
+  display: flex;
+  gap: 0.8rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.scrollWrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.scrollWrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollWrapper::-webkit-scrollbar-thumb {
+  background: var(--surface-color-light);
+  border-radius: var(--radius-full);
+}
+
+.genreBtn {
+  white-space: nowrap;
+  padding: 0.6rem 1.2rem;
+  background: var(--surface-color);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.genreBtn:hover {
+  background: var(--surface-color-light);
+  color: var(--text-primary);
+  border-color: var(--text-tertiary);
+}
+
+.genreBtn.active {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(229, 9, 20, 0.3);
+}
