@@ -172,24 +172,32 @@ npm run lint
 ```
 movie-app/
 ├── public/
-│   └── vite.svg
+│   ├── favicon.svg
+│   └── icons.svg
 ├── src/
 │   ├── components/
-│   │   ├── Header.jsx          # Header & navigation
-│   │   ├── MovieCard.jsx       # Komponen kartu film
-│   │   ├── MovieGrid.jsx       # Grid layout untuk movies
-│   │   ├── SearchBar.jsx       # Input pencarian
-│   │   └── GenreFilter.jsx     # Filter berdasarkan genre
-│   ├── api.js                  # TMDB API integration dengan axios
-│   ├── App.jsx                 # Main component & state management
-│   ├── App.css                 # Global styles
-│   ├── index.css               # Base styles
-│   └── main.jsx                # Entry point
-├── .env.example                # Template environment variables
+│   │   ├── GenreFilter.jsx
+│   │   ├── GenreFilter.module.css
+│   │   ├── Header.jsx
+│   │   ├── Header.module.css
+│   │   ├── Hero.jsx
+│   │   ├── Hero.module.css
+│   │   ├── MovieCard.jsx
+│   │   ├── MovieCard.module.css
+│   │   ├── MovieGrid.jsx
+│   │   ├── MovieGrid.module.css
+│   │   ├── SearchBar.jsx
+│   │   └── SearchBar.module.css
+│   ├── api.js
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+├── .env.example
 ├── .gitignore
 ├── package.json
-├── vite.config.js             # Konfigurasi Vite
-├── eslint.config.js           # Konfigurasi ESLint
+├── vite.config.js
+├── eslint.config.js
 └── README.md
 ```
 
@@ -211,21 +219,22 @@ movie-app/
 
 | Package | Versi | Fungsi |
 |---------|-------|--------|
-| `react` | 18+ | Library UI utama untuk membangun komponen |
-| `react-dom` | 18+ | Rendering React ke DOM browser |
-| `axios` | 1.0+ | HTTP client untuk mengambil data dari TMDB API |
-| `swiper` | 10+ | Library slider/carousel untuk tampilan konten interaktif |
+| `react` | ^19.2.6 | Library UI utama untuk membangun komponen |
+| `react-dom` | ^19.2.6 | Rendering React ke DOM browser |
+| `axios` | ^1.16.1 | HTTP client untuk mengambil data dari TMDB API |
+| `swiper` | ^12.2.0 | Library slider/carousel untuk tampilan konten interaktif |
 
 ### Dev Dependencies
 
-| Package | Fungsi |
-|---------|--------|
-| `@vitejs/plugin-react` | Plugin React untuk Vite dengan HMR |
-| `@vitejs/plugin-react-swc` | SWC compiler untuk optimasi build |
-| `eslint` | JavaScript linter untuk code quality |
-| `@eslint/js` | ESLint core ruleset |
-| `eslint-plugin-react-hooks` | Aturan lint untuk React Hooks |
-| `eslint-plugin-react-refresh` | Validasi React Fast Refresh |
+| Package | Versi | Fungsi |
+|---------|-------|--------|
+| `@vitejs/plugin-react` | ^6.0.1 | Plugin React untuk Vite dengan HMR |
+| `eslint` | ^10.3.0 | JavaScript linter untuk code quality |
+| `@eslint/js` | ^10.0.1 | ESLint core ruleset |
+| `eslint-plugin-react-hooks` | ^7.1.1 | Aturan lint untuk React Hooks |
+| `eslint-plugin-react-refresh` | ^0.5.2 | Validasi React Fast Refresh |
+| `vite` | ^8.0.12 | Build tool dan dev server |
+| `globals` | ^17.6.0 | Definisi global untuk ESLint |
 
 ### Menambah Dependency Baru
 
