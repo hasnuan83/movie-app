@@ -1,16 +1,68 @@
-# React + Vite
+# Movie App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Movie App adalah aplikasi web frontend yang dibangun dengan React dan Vite untuk menampilkan data film dari TMDB (The Movie Database).
 
-Currently, two official plugins are available:
+## Deskripsi
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Aplikasi ini memungkinkan pengguna untuk:
+- Melihat daftar film trending mingguan
+- Mencari film berdasarkan judul
+- Menampilkan daftar genre film
+- Menyaring film berdasarkan genre
 
-## React Compiler
+Data film diambil dari TMDB API menggunakan `axios`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Teknologi & Dependensi
 
-## Expanding the ESLint configuration
+Dependensi utama yang digunakan di proyek ini:
+- `react` — library UI utama untuk membangun komponen
+- `react-dom` — rendering React di browser
+- `vite` — build tool modern dengan hot module replacement
+- `axios` — HTTP client untuk mengambil data API
+- `swiper` — slider/carousel untuk tampilan konten yang interaktif
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Dev dependency penting:
+- `@vitejs/plugin-react` — plugin React untuk Vite
+- `eslint` dan `@eslint/js` — linting JavaScript
+- `eslint-plugin-react-hooks` — aturan lint untuk hooks React
+- `eslint-plugin-react-refresh` — integrasi React refresh
+
+## Fitur
+
+Fitur utama aplikasi:
+- Menampilkan film trending minggu ini
+- Pencarian film dengan query dinamis
+- Menampilkan daftar genre film TMDB
+- Menyaring film berdasarkan genre yang dipilih
+- UI responsif dengan komponen kartu film dan grid
+
+## Struktur Proyek
+
+Beberapa file penting:
+- `src/App.jsx` — logika utama dan state aplikasi
+- `src/api.js` — panggilan TMDB API dengan `axios`
+- `src/components/` — komponen UI seperti `MovieCard`, `MovieGrid`, `SearchBar`, `GenreFilter`, dan `Header`
+
+## Konfigurasi Lingkungan
+
+Aplikasi ini menggunakan environment variables untuk konfigurasi TMDB:
+- `VITE_TMDB_API_KEY`
+- `VITE_TMDB_BASE_URL`
+
+Pastikan file `.env` sudah berisi variabel tersebut sebelum menjalankan aplikasi.
+
+## Menjalankan Proyek
+
+1. Instal dependensi:
+   ```bash
+   npm install
+   ```
+2. Jalankan development server:
+   ```bash
+   npm run dev
+   ```
+3. Buka browser pada URL yang ditampilkan di terminal.
+
+## Lisensi
+
+Proyek ini bisa dikembangkan dan disesuaikan sesuai kebutuhan.
